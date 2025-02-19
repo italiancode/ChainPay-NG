@@ -17,7 +17,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <WagmiProvider config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-white">
           <Header />
 
           <main className="container w-full max-w-md mx-auto px-4 py-8 lg:px-8 min-h-screen">
