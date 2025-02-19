@@ -7,7 +7,6 @@ import { Wallet, ChevronRight, CheckCircle, XCircle, X } from "lucide-react";
 
 export function WalletOptions() {
   const { connectors, connect, error, isPending } = useConnect();
-  const { switchChain, chains } = useSwitchChain();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedConnector, setSelectedConnector] = useState<string | null>(null);
   const [connectionStatus, setConnectionStatus] = useState<"idle" | "connecting" | "success" | "error">("idle");
@@ -28,6 +27,7 @@ export function WalletOptions() {
         setConnectionStatus("idle");
       }, 1500);
     } catch (err) {
+      console.log(err);
       setConnectionStatus("error");
     }
   };

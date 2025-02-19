@@ -83,6 +83,7 @@ export default function BillPaymentForm() {
   const selectedToken = watch("paymentToken");
 
   const onSubmit = async (data: BillPaymentFormData) => {
+    console.log(data);
     setIsSubmitting(true);
     setSubmitStatus("idle");
     try {
@@ -92,6 +93,7 @@ export default function BillPaymentForm() {
       reset();
       setStep(0);
     } catch (error) {
+      console.log(error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);

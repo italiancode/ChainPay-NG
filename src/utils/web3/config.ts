@@ -1,4 +1,4 @@
-import { InjectedConnector } from "@web3-react/injected-connector";
+// import { InjectedConnector } from "@web3-react/injected-connector";  s
 import { http, createConfig } from "wagmi";
 import { base, mainnet } from "wagmi/chains";
 import { injected, metaMask, safe, walletConnect } from "wagmi/connectors";
