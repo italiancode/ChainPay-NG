@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useConnect } from "wagmi";
+import { useConnect, Connector } from "wagmi";
 import { motion, AnimatePresence } from "framer-motion";
 import { Wallet, ChevronRight, CheckCircle, XCircle, X } from "lucide-react";
 import Image from "next/image";
@@ -17,7 +17,7 @@ export function WalletOptions() {
     setIsClient(true);
   }, []);
 
-  const handleConnect = async (connector: any) => {
+  const handleConnect = async (connector: Connector) => {
     setSelectedConnector(connector.uid);
     setConnectionStatus("connecting");
     try {
