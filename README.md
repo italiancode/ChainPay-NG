@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ChainPay NG
+
+ChainPay NG is a blockchain-based bill payment platform enabling Nigerians to pay for utilities and services using stablecoins and cryptocurrencies on a low-fee, scalable blockchain network.
+
+## Features
+
+- **Fast, low-fee transactions**: Designed for microtransactions, enabling payments as low as 10 cents.
+- **Wallet-based payments**: No need for bank accounts; users can pay directly from their crypto wallets.
+- **Smart contract security**: Transparent and tamper-proof transactions powered by blockchain.
+- **Multi-service support**: Pay for utilities, airtime, data bundles, and more.
 
 ## Getting Started
 
@@ -34,3 +43,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Contributing
+
+We welcome contributions from the community! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines on:
+
+- Code standards and best practices.
+- Pull request process and code reviews.
+- Development setup and environment configuration.
+- Testing requirements and quality assurance.
+
+---
