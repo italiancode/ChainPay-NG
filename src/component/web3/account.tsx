@@ -11,6 +11,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { User, LogOut, ChevronDown, ExternalLink } from "lucide-react";
 import { SUPPORTED_CHAIN_IDS } from "@/utils/web3/config";
+import Image from "next/image";
 
 export function Account() {
   const { address, chain } = useAccount();
@@ -41,7 +42,7 @@ export function Account() {
         whileTap={{ scale: 0.98 }}
       >
         {ensAvatar ? (
-          <img
+          <Image
             src={ensAvatar || "/placeholder.svg"}
             alt="ENS Avatar"
             className="w-5 h-5 rounded-full"
@@ -67,7 +68,7 @@ export function Account() {
             <div className="p-4 border-b border-gray-100">
               <div className="flex items-center space-x-3">
                 {ensAvatar ? (
-                  <img
+                  <Image
                     src={ensAvatar || "/placeholder.svg"}
                     alt="ENS Avatar"
                     className="w-10 h-10 rounded-full"

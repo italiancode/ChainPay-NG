@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useConnect, useSwitchChain } from "wagmi";
+import { useConnect } from "wagmi";
 import { motion, AnimatePresence } from "framer-motion";
 import { Wallet, ChevronRight, CheckCircle, XCircle, X } from "lucide-react";
+import Image from "next/image";
 
 export function WalletOptions() {
   const { connectors, connect, error, isPending } = useConnect();
@@ -109,7 +110,7 @@ export function WalletOptions() {
                       whileTap={{ scale: 0.98 }}
                     >
                       <div className="flex items-center gap-3">
-                        <img
+                        <Image
                           src={`/placeholder.svg?height=32&width=32`}
                           alt={`${connector.name} logo`}
                           className="w-6 h-6 rounded-md"
