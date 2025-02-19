@@ -26,6 +26,7 @@ export default function WalletOverview() {
       );
       setBalances(response);
     } catch (error) {
+      console.log(error);
       setError("Failed to fetch balances");
     } finally {
       setIsLoading(false);
