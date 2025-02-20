@@ -111,8 +111,10 @@ export function WalletOptions() {
                     >
                       <div className="flex items-center gap-3">
                         <Image
-                          src={`/placeholder.svg?height=32&width=32`}
+                          src={connector.icon || '/path/to/default-image.png'}
                           alt={`${connector.name} logo`}
+                          width={32}
+                          height={32}
                           className="w-6 h-6 rounded-md"
                         />
                         <span className="font-medium text-gray-700">
