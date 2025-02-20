@@ -9,11 +9,14 @@ import Image from "next/image";
 export function WalletOptions() {
   const { connectors, connect, error, isPending } = useConnect();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedConnector, setSelectedConnector] = useState<string | null>(null);
-  const [connectionStatus, setConnectionStatus] = useState<"idle" | "connecting" | "success" | "error">("idle");
+  const [selectedConnector, setSelectedConnector] = useState<string | null>(
+    null
+  );
+  const [connectionStatus, setConnectionStatus] = useState<
+    "idle" | "connecting" | "success" | "error"
+  >("idle");
   const [isClient, setIsClient] = useState(false);
-  
-// TODO: Add wallet connect
+
   useEffect(() => {
     setIsClient(true);
   }, []);
@@ -112,7 +115,7 @@ export function WalletOptions() {
                     >
                       <div className="flex items-center gap-3">
                         <Image
-                          src={connector.icon || '/path/to/default-image.png'}
+                          src={connector.icon || "/path/to/default-image.png"}
                           alt={`${connector.name} logo`}
                           width={32}
                           height={32}
@@ -120,7 +123,9 @@ export function WalletOptions() {
                         />
                         <span className="font-medium text-gray-700">
                           {connector.name}
-                          {isPending && selectedConnector === connector.uid && " (Connecting...)"}
+                          {isPending &&
+                            selectedConnector === connector.uid &&
+                            " (Connecting...)"}
                         </span>
                       </div>
                       <ChevronRight className="w-4 h-4 text-gray-400" />
