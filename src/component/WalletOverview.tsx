@@ -4,11 +4,13 @@ import { useEffect, useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Wallet, RefreshCw } from "lucide-react";
 import { useAccount } from "wagmi";
+// import { getWalletTokenBalances } from "@/api/GetWalletTokenBalances";
 
 interface WalletBalance {
   BNB: number;
   USDC: number;
 }
+
 
 export default function WalletOverview() {
   const { isConnected } = useAccount();
@@ -20,6 +22,7 @@ export default function WalletOverview() {
     setIsLoading(true);
     setError(null);
     try {
+    
       // Replace with actual API call
       const response = await new Promise<WalletBalance>((resolve) =>
         setTimeout(() => resolve({ BNB: 1.23, USDC: 100.45 }), 1000)

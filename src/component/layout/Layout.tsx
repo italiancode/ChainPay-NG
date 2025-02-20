@@ -15,9 +15,9 @@ export function Layout({ children }: LayoutProps) {
   const [queryClient] = useState(() => new QueryClient());
 
   return (
-    <WagmiProvider config={wagmiConfig}>
-      <QueryClientProvider client={queryClient}>
-        <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
+      <WagmiProvider config={wagmiConfig}>
+        <QueryClientProvider client={queryClient}>
           <Header />
 
           <main className="container w-full max-w-md mx-auto px-4 py-8 lg:px-8 min-h-screen">
@@ -31,8 +31,8 @@ export function Layout({ children }: LayoutProps) {
               </p>
             </div>
           </footer>
-        </div>
-      </QueryClientProvider>
-    </WagmiProvider>
+        </QueryClientProvider>
+      </WagmiProvider>
+    </div>
   );
 }

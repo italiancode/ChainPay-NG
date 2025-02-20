@@ -31,7 +31,7 @@ export function Account() {
     setIsNetworkDropdownOpen(false);
   };
 
-  console.log(chain);
+  // console.log(chain);
 
   return (
     <div className="relative">

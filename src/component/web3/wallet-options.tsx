@@ -25,14 +25,14 @@ export function WalletOptions() {
     setSelectedConnector(connector.uid);
     setConnectionStatus("connecting");
     try {
-      await connect({ connector });
+      connect({ connector });
       setConnectionStatus("success");
       setTimeout(() => {
         setIsModalOpen(false);
         setConnectionStatus("idle");
       }, 1500);
     } catch (err) {
-      console.log(err);
+      console.error("Connection error:", err);
       setConnectionStatus("error");
     }
   };
@@ -115,7 +115,7 @@ export function WalletOptions() {
                     >
                       <div className="flex items-center gap-3">
                         <Image
-                          src={connector.icon || "/path/to/default-image.png"}
+                          src={connector.icon || "/next.svg"}
                           alt={`${connector.name} logo`}
                           width={32}
                           height={32}
