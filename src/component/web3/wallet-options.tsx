@@ -12,7 +12,8 @@ export function WalletOptions() {
   const [selectedConnector, setSelectedConnector] = useState<string | null>(null);
   const [connectionStatus, setConnectionStatus] = useState<"idle" | "connecting" | "success" | "error">("idle");
   const [isClient, setIsClient] = useState(false);
-
+  
+// TODO: Add wallet connect
   useEffect(() => {
     setIsClient(true);
   }, []);
