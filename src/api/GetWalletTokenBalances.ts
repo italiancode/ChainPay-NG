@@ -18,3 +18,5 @@
 //     console.error(e);
 //   }
 // }
+
+// TODO: Add wallet connect
